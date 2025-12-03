@@ -1,0 +1,57 @@
+# **Graph Diagram – City Transport Navigation System**
+
+## **Contributors**
+- Umer Ayub – FA24BCS216  
+- Muaz Chaudhary – FA24BCS192  
+- Ahmed Karam – FA24BCS219  
+
+---
+
+# **City Transportation Graph (ASCII Diagram)**
+
+```
+        (0) Saddar
+           /   \
+          /     \
+   5km   /       \ 3km
+        /         \
+   (1) Cantt ---- (2) Gulberg
+        |   4km       |
+        |              | 6km
+       2km             |
+        |              |
+     (4) Railway ---- (3) DHA
+              7km
+```
+
+---
+
+# **Legend**
+- **Nodes** = Areas (Saddar, Cantt, etc.)  
+- **Edges** = Roads  
+- **Numbers** = Distances (weights)  
+
+---
+
+# **Adjacency List Representation**
+```
+0: (1,5) (2,3)
+1: (0,5) (2,4) (4,2)
+2: (0,3) (1,4) (3,6)
+3: (2,6) (4,7)
+4: (1,2) (3,7)
+```
+
+---
+
+# **Graph Explanation**
+- Saddar connects to Gulberg and Cantt  
+- Cantt connects to Railway and Gulberg  
+- DHA connects to Gulberg and Railway  
+- Distances represent travel weights  
+
+This graph will be used for:
+- BFS, DFS
+- Dijkstra
+- MST
+- Hashing city names

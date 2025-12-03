@@ -1,0 +1,87 @@
+# **DS Plan – City Transport Navigation System**
+
+## **Contributors**
+- Umer Ayub – FA24BCS216  
+- Muaz Chaudhary – FA24BCS192  
+- Ahmed Karam – FA24BCS219  
+
+---
+
+# **1. Problem Statement**
+We are designing a **City Transport Navigation System** that represents a city as a graph where:
+- Nodes represent **locations**
+- Edges represent **roads**
+- Edge weights represent **distances/time**
+
+The system will support:
+- BFS (Breadth First Search)
+- DFS (Depth First Search)
+- Dijkstra’s Shortest Path Algorithm
+- MST (Prim/Kruskal)
+- Hashing (mapping city names → node numbers)
+
+---
+
+# **2. Data Structures Used**
+### **Graph Representation**
+- **Adjacency List**  
+  Efficient for sparse graphs.
+
+### **Hash Map**
+- Maps city names to integer node IDs.  
+- Implemented using `unordered_map<string, int>` in C++.
+
+### **Priority Queue**
+- Used in Dijkstra to always select the smallest distance node.
+
+### **Vectors / Lists**
+- Store neighbors and weights.
+
+---
+
+# **3. City Mapping (Hashing)**
+We create a mapping of areas:
+
+| City Name | Node ID |
+|----------|---------|
+| Saddar | 0 |
+| Cantt | 1 |
+| Gulberg | 2 |
+| DHA | 3 |
+| Railway Station | 4 |
+
+Mapping is done using hashing.
+
+---
+
+# **4. System Workflow**
+1. Input city names  
+2. Convert names → numeric IDs (hashing)  
+3. Build graph using adjacency list  
+4. User selects:
+   - BFS traversal
+   - DFS traversal
+   - Shortest Route (Dijkstra)
+   - Minimum Cost Network (MST)
+5. Output results
+
+---
+
+# **5. Algorithms Used**
+- BFS → Level-wise traversal  
+- DFS → Depth-first traversal  
+- Dijkstra → Shortest weighted route  
+- MST → Minimum cost city connectivity  
+
+---
+
+# **6. Expected Results**
+- City graph built successfully  
+- Paths and distances computed correctly  
+- MST shows minimum cost network  
+- Hashing shows efficient mapping  
+
+---
+
+# **7. Conclusion**
+This system demonstrates **practical use of graph algorithms** and hashing to build a working navigation model for transport networks.  

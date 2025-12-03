@@ -1,0 +1,97 @@
+# **Pseudocode – City Transport Navigation System**
+
+## **Contributors**
+- Umer Ayub – FA24BCS216  
+- Muaz Chaudhary – FA24BCS192  
+- Ahmed Karam – FA24BCS219  
+
+---
+
+# **1. Graph Construction**
+```
+Initialize Graph with N nodes
+For each road (u, v, w):
+    Add edge u → v with weight w
+    Add edge v → u with weight w
+```
+
+---
+
+# **2. Hashing (City Name → ID)**
+```
+Create empty hash map H
+For each city name:
+    assign ID = next integer
+    H[cityName] = ID
+```
+
+---
+
+# **3. BFS (Breadth First Search)**
+```
+BFS(start):
+    mark all nodes unvisited
+    create queue Q
+    mark start visited
+    enqueue start
+
+    while Q not empty:
+        node = Q.dequeue()
+        print node
+
+        for each neighbor in graph[node]:
+            if unvisited:
+                mark visited
+                enqueue neighbor
+```
+
+---
+
+# **4. DFS (Depth First Search)**
+```
+DFS(node):
+    mark node visited
+    print node
+
+    for each neighbor:
+        if unvisited:
+            DFS(neighbor)
+```
+
+---
+
+# **5. Dijkstra’s Algorithm (Shortest Path)**
+```
+Initialize dist[] = infinity
+dist[start] = 0
+
+Create min-priority queue PQ
+push (0, start)
+
+while PQ not empty:
+    (d, node) = PQ.pop smallest
+
+    for each (neighbor, weight):
+        if d + weight < dist[neighbor]:
+            dist[neighbor] = d + weight
+            push (dist[neighbor], neighbor) to PQ
+```
+
+---
+
+# **6. MST (Prim’s Algorithm)**
+```
+Initialize key[] = infinity
+key[0] = 0
+parent[0] = -1
+visited[] = false
+
+Repeat N times:
+    select unvisited node with minimum key
+    mark visited
+
+    for each neighbor:
+        if unvisited AND weight < key[neighbor]:
+            parent[neighbor] = node
+            key[neighbor] = weight
+```
