@@ -1,0 +1,12 @@
+# Kaizen Improvement Review – Week 3
+
+| What Was Built | Problem / Limitation Found | Improvement Idea | Team Member Responsible | Expected Impact |
+|---------------|----------------------------|------------------|------------------------|-----------------|
+| Dijkstra Shortest Path Algorithm | Path was correct but lacked route visualization clarity | Added parent tracking and full path display | Umer Ayub | Improved user understanding of shortest routes |
+| BFS Reachability Feature | Did not handle invalid start stop gracefully | Added stop existence validation | Umer Ayub | Prevents runtime confusion and invalid input issues |
+| Priority Queue Usage | Performance drops with unnecessary reprocessing | Added distance check before expansion | Umer Ayub | Faster execution and optimized performance |
+| Console Output | Outputs were hard to read | Added symbols and structured output | Umer Ayub | Better user experience and readability |
+
+## Kaizen Summary
+Small continuous improvements were applied after testing edge cases.  
+Focus was on **algorithm correctness**, **performance**, and **user clarity**.
